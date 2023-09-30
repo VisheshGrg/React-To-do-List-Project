@@ -9,7 +9,7 @@ import {useDispatch} from 'react-redux'
 import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
 import Navbar from './components/Navbar';
-
+import Home from './components/Home';
 import Todos from './components/Todos';
 import Login from './components/Login';
 import Register from './components/Register';
@@ -27,13 +27,14 @@ function App() {
         <ToastContainer />
         <div>
           <Navbar />
-          <Container >
+          <div>
             <Routes>
               <Route path='/login' element={<Login />} />
               <Route path='/register' element={<Register/>} />
-              <Route path='/' element={<Todos/>} />
+              <Route path='/todos' element={<Todos/>} />
+              <Route path='/' element={<Home/>} />
             </Routes>
-          </Container>
+          </div>
         </div>
       </BrowserRouter>
     </>

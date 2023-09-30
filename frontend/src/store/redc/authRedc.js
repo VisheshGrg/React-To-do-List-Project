@@ -28,9 +28,9 @@ const authRedc = (state = initialState,action) => {
             };
         case "signOut":
             localStorage.removeItem("token");
-            toast("Come back soon!", {
-                position: toast.POSITION.TOP_CENTER,
-            });
+            // toast("Come back soon!", {
+            //     position: toast.POSITION.TOP_CENTER,
+            // });
             return {
                 token: null,
                 name: null,

@@ -23,7 +23,7 @@ const Login = () => {
         // navigate('/');
     };
 
-    if(auth._id) return <Navigate to="/" />;
+    if(auth._id) return <Navigate to="/todos" />;
 
     return (
         <>

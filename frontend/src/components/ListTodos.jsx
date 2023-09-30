@@ -23,7 +23,7 @@ const ListTodos = ({todo, setTodo}) => {
 
     if(!auth._id){
         return(
-            <Navigate to='login' />
+            <Navigate to='/login' />
         )
     }
 

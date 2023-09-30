@@ -26,21 +26,27 @@ export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar style={{display: "flex", alignItems: "center"}}>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <Link to='/' style={{textDecoration: "none", color: "white", fontWeight: "600"}}>My Todo</Link>
+            <Link to='/todos' style={{textDecoration: "none", color: "white", fontWeight: "600"}}>My Todo</Link>
           </Typography>
           {user._id ? (
             <>
-                <Typography variant="substitle2" sx={{flexGrow:1}}>
+                <Typography variant="substitle2" sx={{flexGrow:1}} style={{textAlign: "right", marginRight:"10px"}}>
                     {user.name}
                 </Typography>
+                <Button color="inherit">
+                    <Link to='/' style={{textDecoration: "none", color: "white"}}>Home</Link>
+                </Button>
                 <Button color="inherit" onClick={() => handleSignout()}>
-                    <Link to='/' style={{textDecoration: "none", color: "white"}}>Signout</Link>
+                    <Link to='/todos' style={{textDecoration: "none", color: "white"}}>Signout</Link>
                 </Button>
             </>
           ) : (
             <>
+                <Button color="inherit">
+                    <Link to='/' style={{textDecoration: "none", color: "white"}}>Home</Link>
+                </Button>
                 <Button color="inherit">
                     <Link to='/login' style={{textDecoration: "none", color: "white"}}>Login</Link>
                 </Button>
