@@ -2,9 +2,9 @@ require('dotenv').config();
 
 // const winston = require("winston");
 const cors = require("cors");
-const todos = require("./routes/todos");
-const register = require("./routes/register");
-const login = require("./routes/login");
+const todos = require("./Routes/todos");
+const register = require("./Routes/register");
+const login = require("./Routes/login");
 const { urlencoded } = require('express')
 const express = require("express");
 const mongoose = require("mongoose");
