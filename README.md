@@ -26,7 +26,7 @@ If the connection with the database is successfull, then a proper message is dis
 
 ## Authentication Flow
 
-## User Registration
+### User Registration
 User have to enter name, email and passoword for registering. Email should be unique else an error message is popped on the screen with the help of 'react-toastify'. Validations for password and names are also added. Password is hashed with the help of bcrypt and stored in database.
 
 ### User Login
