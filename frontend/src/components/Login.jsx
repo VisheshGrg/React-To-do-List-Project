@@ -27,42 +27,44 @@ const Login = () => {
 
     return (
         <>
-            <form
-                noValidate
-                onSubmit={handleSubmit}
-                style={{margin: "0px auto", padding: "30px", borderRadius: "9px", boxShadow: "0px 0px 12px -3px #000000", width: "600px", textAlign: "center", marginTop: "100px"}}
-            >
-                <Typography variant="h4" style={{marginBottom: "40px"}}>Login</Typography>
-                <TextField 
-                    id="enter-email"
-                    label="Email"
-                    variant="outlined"
-                    fullWidth
-                    value={creds.email}
-                    onChange={(e) => setCreds({...creds, email: e.target.value})}
-                    style={{margin: "10px"}}
-                />
-                <TextField
-                    id="enter-password"
-                    type="password"
-                    label="Password"
-                    variant="outlined"
-                    fullWidth
-                    value={creds.password}
-                    onChange={(e) => setCreds({ ...creds, password: e.target.value })}
-                    style={{margin: "10px", marginBottom: "40px"}}
-                />
-                <Button
-                    variant="contained"
-                    color="primary"
-                    type="submit"
-                    size="small"
-                    style={{margin: "10px", width: "100%", marginBottom: "30px"}}
+            <div style={{width: "auto", margin: "20px"}}>
+                <form
+                    noValidate
+                    onSubmit={handleSubmit}
+                    style={{margin: "0px auto", padding: "30px", borderRadius: "9px", boxShadow: "0px 0px 12px -3px #000000", width: "auto", textAlign: "center", marginTop: "100px", maxWidth: "600px"}}
                 >
-                    Login
-                </Button>
-                <Typography variant="body2">Don't have an account? <Link to='/register' style={{textDecoration: "none", color: "purple"}}>Register</Link></Typography>
-            </form>
+                    <Typography variant="h4" style={{marginBottom: "40px"}}>Login</Typography>
+                    <TextField 
+                        id="enter-email"
+                        label="Email"
+                        variant="outlined"
+                        fullWidth
+                        value={creds.email}
+                        onChange={(e) => setCreds({...creds, email: e.target.value})}
+                        style={{margin: "10px"}}
+                    />
+                    <TextField
+                        id="enter-password"
+                        type="password"
+                        label="Password"
+                        variant="outlined"
+                        fullWidth
+                        value={creds.password}
+                        onChange={(e) => setCreds({ ...creds, password: e.target.value })}
+                        style={{margin: "10px", marginBottom: "40px"}}
+                    />
+                    <Button
+                        variant="contained"
+                        color="primary"
+                        type="submit"
+                        size="small"
+                        style={{margin: "10px", width: "100%", marginBottom: "30px"}}
+                    >
+                        Login
+                    </Button>
+                    <Typography variant="body2">Don't have an account? <Link to='/register' style={{textDecoration: "none", color: "purple"}}>Register</Link></Typography>
+                </form>
+            </div>
         </>
     );
 };

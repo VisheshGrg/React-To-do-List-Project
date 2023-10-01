@@ -28,17 +28,17 @@ const Todo = ({todo, setTodo, todos}) => {
 
     const handleDelete = (id) => {
         dispatch(deleteTodo(id));
-        navigate('/register');
+        // navigate('/register');
     }
 
     const handleCheck = (id) => {
         dispatch(checkTodo(id));
-        navigate('/register');
+        // navigate('/register');
     }
 
     return (
         <>
-            <div style={{margin: "20px auto", padding: "20px", display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: "lightblue", borderRadius: "12px", width: "500px", height: "auto"}}>
+            <div style={{margin: "20px auto", padding: "20px", display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: "lightblue", borderRadius: "12px", maxWidth: "500px", width: "auto", height: "auto"}}>
                 <div>
                     <ListItemButton role="undefined" style={{display: "flex"}} dense>
                         <ListItemIcon>
