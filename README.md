@@ -1,5 +1,10 @@
 # React-To-do-List-Project
 
+
+## *Note*
+1. As frotend is deployed using vercel and backend is deployed using render, backend may take more time as compared to frontend.
+2. The tasks are already sorted according to the time they were added.
+
 ## Scripts
 To run the project in the local environment use following scripts:
 
