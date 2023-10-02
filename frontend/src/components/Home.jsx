@@ -10,15 +10,15 @@ const Home = () => {
 
     return (
         <div className="home">
-            <Typography variant="h1" className="heading">Todo List App</Typography>
+            <Typography variant="h1" className="home-head">Todo List App</Typography>
             {!user._id ? (
                 <>
-                    <Button variant="contained" color="primary"  style={{margin: "10px", width: "200px"}}><Link style={{textDecoration: "none", color: "white"}} to="/login">Login</Link></Button>
-                    <Button variant="contained" color="primary"  style={{margin: "10px", width: "200px"}}><Link style={{textDecoration: "none", color: "white"}} to="/register">Register</Link></Button>
+                    <Link style={{textDecoration: "none", color: "white", width: "150px", backgroundColor: "#3f51b5",  textAlign: "center", padding: "10px", borderRadius: "10px", margin: "10px"}} to="/login">LOGIN</Link>
+                    <Link style={{textDecoration: "none", color: "white", width: "150px", backgroundColor: "#3f51b5",  textAlign: "center", padding: "10px", borderRadius: "10px"}} to="/register">REGISTER</Link>
                 </>
             ) : (
                 <>
-                    <Button variant="contained" color="primary"  style={{margin: "10px", width: "200px"}}><Link style={{textDecoration: "none", color: "white"}} to="/todos">View Todos</Link></Button>
+                    <Link style={{textDecoration: "none", color: "white", width: "150px", backgroundColor: "#3f51b5", textAlign: "center", padding: "10px", borderRadius: "10px", margin: "10px"}} to="/todos">View Todos</Link>
                 </>
             )
             }
